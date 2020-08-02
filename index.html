@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA</title>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#0094BA">
+
+  <!-- metatag ios -->
+  <!--
+    WEB APP CAPABLE
+    Esta otra característica, permitirá que nuestra Web App se muestre en forma 
+    independiente en el dispositivo iOS en cuestión. 
+    Esto implica que se abrirá en la aplicación interna que iOS tiene, 
+    denominada WKWebView, 
+    evitando utilizar la interfaz de Safari browser, 
+    ni tampoco ningún tipo de barra de navegación.-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  
+  <!-- 
+    En este metatag, el parámetro a modificar es el que corresponde al atributo content, 
+    utilizando black, default o black-translucent, entre las tres posibilidades disponibles. 
+    Este último permitirá tomar el color por defecto definido en nuestra PWA.
+     Prestemos atención al momento de instalar nuestra Web App en el escritorio de iOS, 
+     cómo se comporta la barra superior del S.O. con nuestra web app.
+  -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="apple-mobile-web-app-title" content="PWA">
+
+  <!-- https://medium.com/@firt/dont-use-ios-web-app-meta-tag-irresponsibly-in-your-progressive-web-apps-85d70f4438cb -->
+
+
+  <!-- Metatags para Windows -->
+  <meta name="msapplication-TileColor" content="#303F9F">
+  <meta name="msapplication-TileImage" content="./image/icno_192x192.png">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>Progressive web app</h1>
+  </header>
+  
+  <div class="container">
+    <form class="js-github-user-form github-search-form">
+      <input type="search" id="search" name="search" class="js-search" placeholder="Github user">
+    </form>
+    <section class="js-github-user github-user-section"></section>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
